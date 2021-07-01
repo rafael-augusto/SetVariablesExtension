@@ -1,0 +1,35 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "7e094c7e-e6e7-44d1-91a0-5443d599d13f",
+    "name": "SetMultipleVariables",
+    "friendlyName": "Set Multiple Variables",
+    "description": "Set multiple variables on pipelines programmatically",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Rafael Souza",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Set Multiple Variables",
+    "inputs": [
+        {
+            "name": "variables",
+            "type": "multiLine",
+            "label": "Variable Names",
+            "defaultValue": "e.g. variableNameA=$(variableNameA)\n variableNameB=($anotherVariableName)",
+            "required": true,
+            "helpMarkDown": "Provide the variable and value by using atributing variableNameA=value or variableNameA=$(anotherVariable). Multiple variables can be set by using LF (\\n) e.g. variableA=123\n variableB=456\n variableC=$(pipelineVariable)",
+			"properties": {
+				"resizable": true,
+				"rows": "20"
+			}
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}

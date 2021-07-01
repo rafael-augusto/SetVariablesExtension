@@ -1,0 +1,47 @@
+{
+  "manifestVersion": 1,
+  "id": "set-multiple-variables-task",
+  "name": "Set multiple variables",
+  "version": "0.0.2",
+  "publisher": "SMARAPD",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Azure Pipelines tasks for setting and expanding multiple variables.",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "tags": [
+    "Extension",
+    "Release",
+    "Build",
+    "Variable"
+  ],
+  "content": {
+    "details": {
+      "path": "readme.md"
+    }
+  },
+  "icons": {
+    "default": "images/extension-icon.png"
+  },
+  "files": [
+    {
+      "path": "setVariablesExtension"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "azuredevops-set-multiple-variables",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "setVariablesExtension"
+      }
+    }
+  ]
+}
